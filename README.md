@@ -1,6 +1,6 @@
 # Library Management App
 
-This is a simple **Library Management Application** built with **ASP.NET Core MVC**. It allows users to manage books and authors in a library system. The application supports basic CRUD (Create, Read, Update, Delete) operations for both books and authors.
+This is a simple **Library Management Application** built with **ASP.NET Core MVC**. It allows users to manage books and authors in a library system. The application supports basic CRUD (Create, Read, Update, Delete) operations for both books and authors. **This project was created as part of the Patika+ project assignment.**
 
 ---
 
@@ -120,5 +120,3 @@ Contributions are welcome! If you'd like to contribute, please follow these step
 
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
 ```
-
----
