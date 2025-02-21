@@ -1,0 +1,24 @@
+﻿@model LibraryManagementApp.Models.AuthorListViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Yazar Detayları</h2>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">ID</dt>
+        <dd class="col-sm-10">@Model.Id</dd>
+
+        <dt class="col-sm-2">Adı Soyadı</dt>
+        <dd class="col-sm-10">@Model.FullName</dd>
+
+        <dt class="col-sm-2">Doğum Tarihi</dt>
+        <dd class="col-sm-10">@Model.DateOfBirth.ToShortDateString()</dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="List">Listeye Dön</a>
+</div>

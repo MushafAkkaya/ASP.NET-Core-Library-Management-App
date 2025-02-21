@@ -1,0 +1,36 @@
+﻿@model IEnumerable<LibraryManagementApp.Models.AuthorListViewModel>
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<h2>Yazarlar</h2>
+
+<p>
+    <a asp-controller="Author" asp-action="Create" class="btn btn-primary">Yeni Yazar Ekle</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Adı Soyadı</th>
+            <th scope="col">Doğum Tarihi</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">@item.FullName</th>
+                <td>@item.DateOfBirth.ToShortDateString()</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary">Detaylar</a> |
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">Düzenle</a> |
+                    <form asp-action="Delete" method="post" style="display:inline;">
+                        <input type="hidden" name="id" value="@item.Id" />
+                        <button type="submit" class="btn btn-danger">Sil</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
